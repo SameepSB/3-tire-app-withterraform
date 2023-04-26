@@ -18,7 +18,7 @@ provisioner "file"{
     connection {
       type        = "ssh"
       user        = "ubuntu"
-      private_key = "${file("/home/sameep/pisb/share/aws/3-tire-app/deployer-key.pem")}"
+      private_key = "${file("deployer-key.pem")}"
       host        = "${aws_instance.demoinstance.public_ip}"
     }
   }
